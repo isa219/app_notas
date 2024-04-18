@@ -17,7 +17,32 @@ if ($_SESSION['loggin'] == true) {
 	echo "<input type='hidden' name='id_usuario' value='$id'>";
 	echo "<span id='formulariot_area_nota'>Texto</span>";
 	echo "<span id='formulariot_categoria_nota'>Categoría</span>";
-	echo "<select id='formulario_categoria_nota' name='categoria'><option value='1'>Clase</option><option>2</option><option>3</option><option>4</option></select>";
+	echo "<select id='formulario_categoria_nota' name='categoria'>";
+	
+	
+	
+	include "../conexion.php";
+$conexion=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+
+if (!$conexion) {
+		die("Conexion fallida: " . mysqli_connect_error());
+	} else {
+		$instruccion1 = "SELECT * FROM categoria;";
+		$consulta1 = mysqli_query ($conexion,$instruccion1) or die ("Fallo en la consulta de consulta.");
+		
+		// Mostrar resultados de la consulta
+		$nfilas = mysqli_num_rows ($consulta1);
+		if ($nfilas >= 1) {
+			for ($i=0; $i<$nfilas; $i++) {
+				$resultado = mysqli_fetch_array ($consulta1);
+				echo "<option value=" . $resultado['id_cat'] . ">" . $resultado['tit_cat'] . "</option>";
+			}
+			
+		}
+}
+
+
+	echo "</select>";
 	echo "<textarea id='formulario_area_nota' name='nota'></textarea>";
 	echo "<input type='submit' value='Crear' id='formulario_boton_nota'>";
 	echo "</form>";

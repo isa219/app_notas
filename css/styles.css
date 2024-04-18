@@ -231,3 +231,9 @@ a {
 	margin-left: 1em;
 	font-size: 1.2em;
 }
+.eliminar_categoria {
+	position: relative;
+	left: 45em;
+	font-size: 1.2em;
+	top: 10em;
+}
