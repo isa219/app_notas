@@ -1,0 +1,233 @@
+#caja_login {
+	position: absolute;
+	border: 1px black solid;
+	width: 40em;
+	top: 10em;
+	left: 35em;
+	height: 18em;
+}
+#bienvenida {
+	position: absolute;
+	font-size: 4em;
+	right: 9em;
+}
+#user_login {
+	position: absolute;
+	font-size: 2em;
+	top: 1em;
+	left: 2em;	
+}
+#password_login {
+	position: absolute;
+	font-size: 2em;
+	top: 3em;
+	left: 2em;
+}
+#link_crear_cuenta {
+	position: absolute;
+	font-size: 2em;
+	top: 7em;
+	left: 8em;
+}
+#formulario_login_email {
+	position: absolute;
+	font-size: 1.3em;
+	top: 1.8em;
+	left: 15.5em;
+}
+#formulario_login_password {
+	position: absolute;
+	font-size: 1.3em;
+	top: 4.9em;
+	left: 11em;
+}
+#enlace_crear_cuenta {
+	text-decoration: none;
+	color: blue;
+}
+#name_create {
+	position: absolute;
+	font-size: 2em;
+	top: 1em;
+	left: 2em;
+}
+#email_create {
+	position: absolute;
+	font-size: 2em;
+	top: 3em;
+	left: 2em;
+}
+#password_create {
+	position: absolute;
+	font-size: 2em;
+	top: 5em;
+	left: 2em;
+}
+#caja_create {
+	position: absolute;
+	border: 1px black solid;
+	width: 40em;
+	top: 10em;
+	left: 35em;
+	height: 22em;
+}
+#formulario_create_name {
+	position: absolute;
+	font-size: 1.3em;
+	top: 1.8em;
+	left: 9em;
+}
+#formulario_create_email {
+	position: absolute;
+	font-size: 1.3em;
+	top: 5em;
+	left: 15.7em;
+}
+#enlace_tengo_cuenta {
+	text-decoration: none;
+	color: blue;
+}
+#link_tengo_cuenta {
+	position: absolute;
+	font-size: 2em;
+	top: 9em;
+	left: 6.5em;
+}
+#formulario_create_password {
+	position: absolute;
+	font-size: 1.3em;
+	top: 8em;
+	left: 11em;
+}
+#boton_login {
+	position: absolute;
+	font-size: 1.3em;
+	top: 8em;
+	left: 12.7em;
+}
+#boton_create {
+	position: absolute;
+	font-size: 1.3em;
+	top: 11em;
+	left: 11.3em;
+}
+#menu_app {
+	background-color: blue;
+	border: 0.15em black solid;
+	padding: 1em;
+}
+body {
+	margin: 0px;
+}
+#logo {
+	color: white;
+	font-size: 2em;
+}
+#fecha {
+	color: white;
+	margin-left: 1em;
+	font-size: 1.2em;
+}
+#crear_nota {
+	color: white;
+	margin-left: 1em;
+	font-size: 1.2em;
+}
+#cerrar_sesion {
+	color: white;
+	margin-left: 1em;
+	font-size: 1.2em;
+	float: right;
+	padding-top: 0.5em;
+}
+#usuario {
+	color: white;
+	margin-left: 1em;
+	font-size: 1.2em;
+	float: right;
+	padding-top: 0.5em;
+}
+a {
+	text-decoration: none;
+	color: white;
+}
+#formulario_titulo_nota {
+	position: absolute;
+	font-size: 1.3em;
+	top: 7em;
+	left: 20em;
+	width: 30em;
+}
+#formulario_categoria_nota {
+	position: absolute;
+	font-size: 1em;
+	top: 9.5em;
+	left: 66em;
+}
+#formulario_area_nota {
+	position: absolute;
+	font-size: 1em;
+	top: 17em;
+	left: 32em;
+	width: 48em;
+	height: 15em;
+}
+#formulario_boton_nota {
+	position: absolute;
+	font-size: 1em;
+	top: 27em;
+	left: 45em;
+}
+#formulariot_titulo_nota {
+	position: absolute;
+	font-size: 1.3em;
+	top: 5em;
+	left: 20em;
+	width: 30em;
+}
+#formulariot_categoria_nota {
+	position: absolute;
+	font-size: 1.3em;
+	top: 5.5em;
+	left: 50.8em;
+	width: 48em;
+	height: 15em;
+}
+#formulariot_area_nota {
+	position: absolute;
+	font-size: 1.3em;
+	top: 9em;
+	left: 20em;
+	width: 48em;
+	height: 15em;
+}
+#crear_categoria {
+	color: white;
+	margin-left: 1em;
+	font-size: 1.2em;
+}
+#formulario_boton_cat {
+	position: absolute;
+	font-size: 1em;
+	top: 16em;
+	left: 39em;
+}
+#formulario_titulo_cat {
+	position: absolute;
+	font-size: 1.3em;
+	top: 10em;
+	left: 30em;
+	width: 30em;
+}
+#formulariot_titulo_cat {
+	position: absolute;
+	font-size: 1.3em;
+	top: 8em;
+	left: 30em;
+	width: 30em;
+}
+.borrar_categoria {
+	color: white;
+	margin-left: 1em;
+	font-size: 1.2em;
+}
