@@ -235,5 +235,38 @@ a {
 	position: relative;
 	left: 45em;
 	font-size: 1.2em;
-	top: 10em;
+	top: 2.2em;
+}
+#eliminar_categoria {
+	position: absolute;
+	right: 50em;
+	top: 9em;
+}
+.texto_nota {
+	left: 30em;
+	top: 1em;
+}
+.caja_texto {
+	color: red;
+	position: relative;
+	left: 50em;
+	padding: 1em;
+}
+.titulonota {
+	position: relative;
+	left: 42.5em;
+}
+.fecha_nota {
+	position: relative;
+	left: 80em;
+}
+#eliminar_nota {
+	position: relative;
+	left: 120.5em;
+	bottom: 22em;
+}
+.check_not {
+	position: relative;
+	left: 40em;
+	bottom: 2.5em;
 }

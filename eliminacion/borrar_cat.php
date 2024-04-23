@@ -24,14 +24,21 @@ if (!$conexion) {
 		
 		// Mostrar resultados de la consulta
 		$nfilas = mysqli_num_rows ($consulta1);
+		echo "<form action='./eliminar_cat.php' method='POST'>";	
 		if ($nfilas >= 1) {
+			
 			for ($i=0; $i<$nfilas; $i++) {
 				$resultado = mysqli_fetch_array ($consulta1);
-				echo "<span class='eliminar_categoria'>" . $resultado['tit_cat'] . "</span><br>";
+				
+				echo "<span class='eliminar_categoria'>" . "<input type='checkbox' name='lista[]' value='" . $resultado['id_cat'] . "'>" . $resultado['tit_cat'] . "</span><br>";
+				
 			}
+		echo "<input type='submit' value='Eliminar' id='eliminar_categoria'>";
+		echo "</form>";	
 		}
 }
 	
+			
 	
 	
 	echo "</body>";
