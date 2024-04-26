@@ -1,5 +1,4 @@
 <?php
-
 $email= trim(strip_tags($_REQUEST["email"]));
 $password= trim(strip_tags($_REQUEST["password"]));
 
@@ -17,6 +16,7 @@ $conexion = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 		if ($nfilas > 0) {
 			$resultado = mysqli_fetch_array ($consulta);
 			
+			
 			if (password_verify($password, $resultado['pas_usu'])) {
 				
 				session_start();
@@ -26,8 +26,13 @@ $conexion = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 				header('Location: ./index.php');
 				
 			} else {
-				echo 'La contraseña es incorrecta.';
+				echo "<script>";
+				echo "alert('Datos incorrectos al intentar iniciar sesion');";
+				echo "window.history.go(-1);"; // Redirige hacia atrás en la historia del navegador
+				echo "</script>";
 			}
+
+			
 		} else {
 			echo "<script>";
 			echo "alert('Datos incorrectos al intentar iniciar sesion');";
@@ -35,7 +40,4 @@ $conexion = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 			echo "</script>";
 		}
 	}
-
-$nueva_password = password_verify($password, PASSWORD_DEFAULT);
-
 ?>

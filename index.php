@@ -2,6 +2,7 @@
 session_start();
 $fecha_actual = date('Y-m-d');
 $usuario = $_SESSION['usuario'];
+$mi_usuario=$_SESSION['id'];
 if ($_SESSION['loggin'] == true) {
 	echo "<html>";
 	echo "<head>";
@@ -17,8 +18,9 @@ $conexion=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 if (!$conexion) {
 	die("Conexion fallida: " . mysqli_connect_error());
 } else {
-	$instruccion1 = "SELECT * FROM nota;";
+	$instruccion1 = "SELECT nota.id_not,nota.fec_not,nota.tit_not,nota.tex_not,usuario.nam_usu,categoria.tit_cat FROM nota,categoria,usuario WHERE nota.id_cat = categoria.id_cat AND nota.id_usu=usuario.id_usu AND nota.id_usu=$mi_usuario;";
 	$consulta1 = mysqli_query ($conexion,$instruccion1) or die ("Fallo en la consulta de consulta.");
+	
 		
 		// Mostrar resultados de la consulta
 	$nfilas = mysqli_num_rows ($consulta1);
@@ -26,12 +28,13 @@ if (!$conexion) {
 		echo "<form action='./eliminar_not.php' method='POST'>";
 		for ($i=0; $i<$nfilas; $i++) {
 			$resultado = mysqli_fetch_array ($consulta1);
+			echo "<div class='caja_nota'>";
 			echo "<span class='fecha_nota'>" . $resultado['fec_not'] . "</span>";
 			echo "<span class='titulonota'>" . $resultado['tit_not'] . "</span>";
-			echo "<div class='caja_texto'>";
-			echo "<div class='texto_nota'>" . $resultado['tex_not'] . "</div>";
-			echo "</div>";
+			echo "<div class='caja_texto'>" . $resultado['tex_not'] . "</div>";
+			echo "<div class='caja_categoria'>" . $resultado['tit_cat'] . "</div>";
 			echo "<input type='checkbox' class='check_not' name='lista[]' value='" . $resultado['id_not'] . "'>";
+			echo "</div>";
 		}
 		echo "<input type='submit' value='Eliminar' id='eliminar_nota'>";
 		echo "</form>";

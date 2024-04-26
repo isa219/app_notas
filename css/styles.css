@@ -242,15 +242,18 @@ a {
 	right: 50em;
 	top: 9em;
 }
-.texto_nota {
-	left: 30em;
-	top: 1em;
-}
 .caja_texto {
 	color: red;
 	position: relative;
 	left: 50em;
-	padding: 1em;
+	padding: 0em;
+	width: 50em;
+	overflow: scroll;
+	border: 1px gren solid;
+}
+.texto_nota {
+	border: 1px green solid;
+	width: 10em;
 }
 .titulonota {
 	position: relative;
@@ -262,11 +265,20 @@ a {
 }
 #eliminar_nota {
 	position: relative;
-	left: 120.5em;
-	bottom: 22em;
+	left: 124.5em;
+	bottom: 20em;
 }
 .check_not {
 	position: relative;
-	left: 40em;
-	bottom: 2.5em;
+	left: 124.5em;
+	bottom: 3.5em;
+}
+.caja_nota {
+	padding-top: 2em;
+}
+.caja_categoria {
+	position: relative;
+	left: 91em;
+	bottom: 9em;
+	padding: 1em;
 }

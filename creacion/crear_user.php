@@ -31,14 +31,14 @@ if ($name == "" ) {
 		die("Conexion fallida: " . mysqli_connect_error());
 	} else {
 		$instruccion = "INSERT INTO usuario (nam_usu,ema_usu,pas_usu) VALUES ('$name','$email','$nueva_password');";
-		$consulta = mysqli_query ($conexion,$instruccion) or die ("Fallo en la consulta.");
+		$consulta = mysqli_query ($conexion,$instruccion) or die ($instruccion);
 		$nfilas = mysqli_num_rows ($consulta);
 		if ($nfilas > 0) {
 			echo "<script>";
 			echo "alert('Error');";
 			echo "</script>";
 		} else {
-			header('Location: ./login.html');
+			header('Location: ../index.php');
 		}
 	}
 }
