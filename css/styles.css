@@ -245,40 +245,34 @@ a {
 .caja_texto {
 	color: red;
 	position: relative;
-	left: 50em;
-	padding: 0em;
-	width: 50em;
+	left: 2em;
+	padding-right: 1em;
 	overflow: scroll;
-	border: 1px gren solid;
-}
-.texto_nota {
-	border: 1px green solid;
-	width: 10em;
 }
 .titulonota {
 	position: relative;
-	left: 42.5em;
+	left: -6.5em;
 }
 .fecha_nota {
 	position: relative;
-	left: 80em;
+	left: 95em;
 }
 #eliminar_nota {
-	position: relative;
-	left: 124.5em;
-	bottom: 20em;
+	position: absolute;
+	left: 135em;
+	bottom: 53em;
 }
 .check_not {
 	position: relative;
-	left: 124.5em;
-	bottom: 3.5em;
+	left: 135em;
+	bottom: 5em;
 }
 .caja_nota {
 	padding-top: 2em;
 }
 .caja_categoria {
 	position: relative;
-	left: 91em;
-	bottom: 9em;
-	padding: 1em;
+	left: 105em;
+	bottom: 2.2em;
+	margin-top: 1em;
 }

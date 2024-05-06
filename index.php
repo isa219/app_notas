@@ -25,14 +25,14 @@ if (!$conexion) {
 		// Mostrar resultados de la consulta
 	$nfilas = mysqli_num_rows ($consulta1);
 	if ($nfilas >= 1) {
-		echo "<form action='./eliminar_not.php' method='POST'>";
+		echo "<form action='eliminacion/eliminar_not.php' method='POST'>";
 		for ($i=0; $i<$nfilas; $i++) {
 			$resultado = mysqli_fetch_array ($consulta1);
 			echo "<div class='caja_nota'>";
 			echo "<span class='fecha_nota'>" . $resultado['fec_not'] . "</span>";
 			echo "<span class='titulonota'>" . $resultado['tit_not'] . "</span>";
-			echo "<div class='caja_texto'>" . $resultado['tex_not'] . "</div>";
 			echo "<div class='caja_categoria'>" . $resultado['tit_cat'] . "</div>";
+			echo "<div class='caja_texto'>" . $resultado['tex_not'] . "</div>";
 			echo "<input type='checkbox' class='check_not' name='lista[]' value='" . $resultado['id_not'] . "'>";
 			echo "</div>";
 		}
